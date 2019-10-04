@@ -14,6 +14,7 @@ namespace TodoApi
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            // Test - add change
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
