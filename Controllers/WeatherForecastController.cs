@@ -26,6 +26,7 @@ namespace TodoApi.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            Console.WriteLine(nameof(WeatherForecast));
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
