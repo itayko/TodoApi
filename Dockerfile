@@ -4,14 +4,13 @@ WORKDIR /app
 # Copy csproj and restore as distinct layers
 #COPY *.sln .
 #COPY TodoApi/*.csproj ./TodoApi/
-COPY [“TodoApi.csproj”, “./”]
+COPY TodoApi.csproj .
 
-#RUN dotnet restore
-RUN dotnet restore “./TodoApi.csproj”
+RUN dotnet restore
 
 # Copy everything else and build app
 #COPY TodoApi/. ./TodoApi/
-COPY . ./
+COPY . .
 
 WORKDIR /app/TodoApi
 RUN dotnet publish -c Release -o out
