@@ -17,6 +17,9 @@ RUN dotnet publish -c Release -o out
 
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/TodoApi/out ./
+#WORKDIR /app
+#COPY --from=build /app/TodoApi/out ./
+
+WORKDIR /publish
+COPY --from=build-env /publish .
 ENTRYPOINT ["dotnet", "TodoApi.dll"]
