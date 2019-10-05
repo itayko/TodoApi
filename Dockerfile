@@ -1,13 +1,16 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 WORKDIR /app
 
-# copy csproj and restore as distinct layers
+# Copy csproj and restore as distinct layers
 COPY *.sln .
 COPY TodoApi/*.csproj ./TodoApi/
+
 RUN dotnet restore
 
-# copy everything else and build app
-COPY TodoApi/. ./TodoApi/
+# Copy everything else and build app
+#COPY TodoApi/. ./TodoApi/
+COPY . ./
+
 WORKDIR /app/TodoApi
 RUN dotnet publish -c Release -o out
 
