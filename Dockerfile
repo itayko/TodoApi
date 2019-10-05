@@ -21,7 +21,8 @@ RUN ls /app
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS runtime
 WORKDIR /app
-COPY --from=build-env /app/out ./
+#COPY --from=build-env /app/out ./
+COPY --from=build /app/out ./
 
 
 RUN if [ ! -f "/TodoApi/bin/Release/netcoreapp3.0/TodoApi.dll" ]; then echo "File not found!"; fi
