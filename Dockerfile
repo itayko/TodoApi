@@ -12,7 +12,7 @@ RUN dotnet restore
 #COPY TodoApi/. ./TodoApi/
 COPY . .
 
-WORKDIR /app/TodoApi
+#WORKDIR /app/TodoApi
 RUN dotnet publish -c Release -o out
 
 
