@@ -9,12 +9,12 @@ COPY *.json ./
 
 RUN dotnet restore
 
-# Unit tests
-RUN dotnet test
-
 # Copy everything else and build app
 #COPY TodoApi/. ./TodoApi/
 COPY . ./
+
+# Unit tests
+RUN dotnet test
 
 #WORKDIR /app/TodoApi
 #RUN dotnet publish -c Release -o out
