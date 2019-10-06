@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CFresh\\TodoApi\\TodoApi.csproj": {}
+    "c:\\CFresh\\TodoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "C:\\CFresh\\TodoApi\\TodoApi.csproj": {
+    "c:\\CFresh\\TodoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CFresh\\TodoApi\\TodoApi.csproj",
+        "projectUniqueName": "c:\\CFresh\\TodoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "C:\\CFresh\\TodoApi\\TodoApi.csproj",
+        "projectPath": "c:\\CFresh\\TodoApi\\TodoApi.csproj",
         "packagesPath": "C:\\Users\\KDVB43\\.nuget\\packages\\",
-        "outputPath": "C:\\CFresh\\TodoApi\\obj\\",
+        "outputPath": "c:\\CFresh\\TodoApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -48,6 +48,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
             }
           },
           "imports": [

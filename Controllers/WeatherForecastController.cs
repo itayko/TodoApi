@@ -27,7 +27,7 @@ namespace TodoApi.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             Console.WriteLine(nameof(WeatherForecast));
-            var rng = new Random();
+            var rng = GetRandom();//new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -35,6 +35,11 @@ namespace TodoApi.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        private Random GetRandom()
+        {
+            return new Random();
         }
     }
 }
