@@ -13,8 +13,15 @@ namespace TodoApi
     {
         public static void Main(string[] args)
         {
+            System.Console.WriteLine("Hello Itay");
+            int x = Add(4,5);
             CreateHostBuilder(args).Build().Run();
             // Test
+        }
+
+        public static int Add(int v1, int v2)
+        {
+            return v1 + v2;
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
