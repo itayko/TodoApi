@@ -27,5 +27,9 @@ COPY --from=build /app/out ./
 
 RUN if [ ! -f "/TodoApi/bin/Release/netcoreapp3.0/TodoApi.dll" ]; then echo "File not found!"; fi
 
+
+# Unit tests
+RUN dotnet test
+
 EXPOSE 80
 ENTRYPOINT ["dotnet", "TodoApi.dll"]
